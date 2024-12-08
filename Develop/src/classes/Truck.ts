@@ -6,7 +6,7 @@ import Wheel from "./Wheel.js";
 import AbleToTow from "../interfaces/AbleToTow.js";
 
 // Truck class that extends Vehicle class
-class Truck extends Vehicle  implements AbleToTow {
+class Truck extends Vehicle implements AbleToTow {
   // Declare properties of the Truck class
   vin: string;
   color: string;
@@ -18,7 +18,7 @@ class Truck extends Vehicle  implements AbleToTow {
   wheels: Wheel[];
   towingCapacity: number;
 
-// Constructor for the Truck class
+  // Constructor for the Truck class
   constructor(
     vin: string,
     color: string,
@@ -51,7 +51,7 @@ class Truck extends Vehicle  implements AbleToTow {
       this.wheels = wheels;
     }
   }
-  
+
   // Implement the tow method from the AbleToTow interface
   // Get the make an model of the vehicle if it exists
   // Check if the vehicle's weight is less than or equal to the truck's towing capacity
@@ -60,34 +60,35 @@ class Truck extends Vehicle  implements AbleToTow {
 
   tow(vehicle: Truck | Motorbike | Car): void {
     const vehicleType = vehicle.constructor.name;
-    const MakeAndModel = `${vehicle.make} ${vehicle.model}`;
+    const makeAndModel = `${vehicle.make} ${vehicle.model}`;
+
     if (vehicle.weight <= this.towingCapacity) {
-      console.log(`${MakeAndModel} (${vehicleType}) is being towed.`);
+      console.log(`${makeAndModel} (${vehicleType}) is being towed.`);
     } else {
-      console.log(`${MakeAndModel} (${vehicleType}) is too heavy to be towed. Mac towing capacity is ${this.towingCapacity}.`);
-    }
+      console.log(
+        `${makeAndModel} (${vehicleType}) is too heavy to be towed. Max towing capacity is ${this.towingCapacity}.`
+      );
     }
   }
 
   // Override the printDetails method from the Vehicle class
-override printDetails(): void {
-      // Call the printDetails method of the parent class, Vehicle
-  super.printDetails();
+  override printDetails(): void {
+    // Call the printDetails method of the parent class, Vehicle
+    super.printDetails();
 
-      // Print details of the Car class
-  console.log(`VIN: ${this.vin}`);
-  console.log(`Make: ${this.make}`);
-  console.log(`Model: ${this.model}`);
-  console.log(`Year: ${this.year}`);
-  console.log(`Weight: ${this.weight} lbs`);
-  console.log(`Top Speed: ${this.topSpeed} mph`);
-  console.log(`Color: ${this.color}`);
-  console.log(`Towing Capacity: ${this.towingCapacity}`);
-
-    // Print details of the wheels
-    console.log(
-      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
-    );
+    // Print details of the Car class
+    console.log(`VIN: ${this.vin}`),
+      console.log(`Make: ${this.make}`),
+      console.log(`Model: ${this.model}`),
+      console.log(`Year: ${this.year}`),
+      console.log(`Weight: ${this.weight} lbs`),
+      console.log(`Top Speed: ${this.topSpeed} mph`),
+      console.log(`Color: ${this.color}`),
+      console.log(`Towing Capacity: ${this.towingCapacity}`),
+      // Print details of the wheels
+      console.log(
+        `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+      );
     console.log(
       `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
     );
@@ -97,7 +98,7 @@ override printDetails(): void {
     console.log(
       `Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`
     );
-
+  }
 }
 // Export the Truck class as the default export
 export default Truck;
