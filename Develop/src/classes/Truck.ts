@@ -5,7 +5,7 @@ import Car from "./Car.js";
 import Wheel from "./Wheel.js";
 import AbleToTow from "../interfaces/AbleToTow.js";
 
-// Truck class that extends Vehicle class
+// Truck class that extends Vehicle class and implements AbleToTow
 class Truck extends Vehicle implements AbleToTow {
   // Declare properties of the Truck class
   vin: string;
@@ -100,5 +100,6 @@ class Truck extends Vehicle implements AbleToTow {
     );
   }
 }
+
 // Export the Truck class as the default export
 export default Truck;
