@@ -292,13 +292,13 @@ class Cli {
       .then((answers) => {
         const selectedVehicle = answers.vehicleToTow;
 
-        // check if the selected vehicle is the truck
+        // check if the selected vehicle is the same truck
         // if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
         // if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
 
         if (selectedVehicle.vin === truck.vin) {
           console.log(
-            `The truck ${selectedVehicle} cannot tow itself. Please select another another action.`
+            `The truck with VIN ${selectedVehicle.vin} (${selectedVehicle.make} ${selectedVehicle.model}) cannot tow itself. Please select another another action.`
           );
           this.performActions();
         } else {
@@ -399,9 +399,9 @@ class Cli {
               if (this.vehicles[i] instanceof Truck) {
                 // Call the findVehicleToTow method to tow another vehicle
                 this.findVehicleToTow(this.vehicles[i] as Truck);
-              
               } else {
                 console.log("Only trucks can tow vehicles.");
+                this.performActions();
               }
               return;
             }
