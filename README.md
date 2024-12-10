@@ -1,132 +1,62 @@
-# 08 TypeScript and OOP: Vehicle Builder
+## Vehicle Builder CLI
+  
 
-## Your Task
+  ## Description
+This is a TypeScript command-line application that allows users to build and manage different  types of vehicles, including cars, trucks and motorbikes. The application prompts users to either create a new vehicle or selec an existing one. Once a vehicle is selected, users can perform various actions with it. The program is designed to demonstrate object-oriented programing (OOP) principles using TypeScript.
 
-Your task is to update an existing TypeScript command-line application that builds and uses cars to have additional options for motorbikes and trucks. The application prompts the user to create a new vehicle or select an existing vehicle. After going through the creation process or the selection process, the user is able to perform certain actions with the selected vehicle. The user is returned to the actions menu after each action until they decide to exit the application.
+## Table of Contents
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[License](#license)
+-[Contributing](#contributing)
+-[Questions](#questions)
 
-Because this application won't be deployed, you'll need to provide a link to a walkthrough video that demonstrates its functionality. You'll need to submit a link to the video **and** add it to the README of your project.
+## Installation
+Clone the repository using the following command: git clone <repository-url>
+Navigate to the project directory: cd vehicle-builder
+Install the dependencies: npm install
 
-Refer to the [video submission guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
+## Usage
+To run the application, use the following command: npm start
+Follow the prompts to create or select a vehicle, then choose actions to perform with the vehicle.
 
-### User Story
+Vehicle Creation
+	1.	When creating a vehicle, the user can choose between a car, truck, or motorbike.
+	2.	Enter specific details about the vehicle, such as:
+	•	Car: Enter make, model, year, and color.
+	•	Truck: Additional details like towing capacity.
+	•	Motorbike: Details like wheel size.
 
-```md
-AS a developer
-I WANT to update an existing application to include additional vehicle types
-SO THAT I am able to comprehend and work with existing code bases.
-```
+Vehicle Actions
 
-## Acceptance Criteria
+Once the vehicle is created, you can perform actions such as:
+	•	Start engine
+	•	Drive
+	•	Stop engine
+	•	Truck-only action: Tow
+  • Motorbike-only action: Wheelie
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted to create a new vehicle or existing vehicle
-THEN I can choose between the two options
-WHEN I am prompted to choose the vehicle type during creation
-THEN I can choose between car, truck, and motorbike
-WHEN I am prompted for details about the vehicle
-THEN I can enter the vehicle information
-WHEN I have entered all the vehicle information
-THEN I can use the created vehicle
-WHEN I select an existing vehicle
-THEN I can use the selected existing vehicle
-WHEN I have created a new vehicle or selected an existing vehicle
-THEN I can perform actions with that vehicle
-WHEN I perform an action with a vehicle
-THEN I see the result of the action in the command-line
-WHEN I complete the process of performing an action
-THEN I can perform additional actions until I choose to exit
-```
+The user is returned to the actions menu after each action until they choose to exit.
 
-## Additional Requirements
+## License
+none
 
-This Challenge combines many of the skills covered so far. In addition to the user story and acceptance criteria, we've provided some guidelines to help you get started.
+## Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+  1.	Fork the repository.
+	2.	Create a new branch for your feature or bug fix: git checkout -b feature/your-feature-name
+  3.	Make your changes and commit them: git commit -m "Add some feature"
+  4.	Push to the branch: git push origin feature/your-feature-name
+  5.	Open a pull request describing your changes. 
 
-Because this Challenge requires a video submission, refer to the [Full-Stack Blog video submission guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for guidance on creating and sharing a video.
-
-Your application should use [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-npm start
-```
-
-## 📝 Notes
-
-Moving forward, you will be provided with the `tsconfig.json` file. This is to reflect the fact that most companies assign you projects with these configurations already set up.
-
-## Helpful TypeScript Resources
-
-* [Classes](https://www.typescriptlang.org/docs/handbook/2/classes.html)
-
-* [Object types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
-
-* [Everyday types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
-
-* [More on functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
-
-## Grading Requirements
-
-> **Note** If a Challenge assignment submission is marked as "0," it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Deliverables: 20%
-
-* A walkthrough video that demonstrates the functionality of the Vehicle Builder.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* The `README.md` file must include a link to the walkthrough video.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate all the prompts and functionality related to trucks and motorbikes working properly.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * It uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-  * The application must have properly implemented `Truck` and `Motorbike` classes:
-
-    * The user should be able to choose between a car, a truck, or a motorbike when creating a vehicle.
-
-    * The `Truck` and `Motorbike` classes must prompt the user for details that the `Car` class doesn't.
-
-    * The `Truck` class must allow the user to implement an action that the `Car` and `Motorbike` classes cannot.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality readme with description and a link to a walkthrough video.
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video that demonstrates the functionality of the application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-&copy; 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+  Guidelines
+	•	Ensure that your code follows best practices for TypeScript and OOP.
+	•	Make sure to write clear, concise commit messages.
+	•	Always test your changes before submitting a pull request.
+	•	Contributions should focus on enhancing functionality, fixing bugs, or improving code readability.
+  
+## Questions
+Contact me for any further questions;
+-Github: [rvrutan] (https://github.com/rvrutan)
+-Email: [rutanroni@gmail.com](mailto: rutanroni@gmail.com)
