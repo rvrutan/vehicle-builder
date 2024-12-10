@@ -399,7 +399,7 @@ class Cli {
               if (this.vehicles[i] instanceof Truck) {
                 // Call the findVehicleToTow method to tow another vehicle
                 this.findVehicleToTow(this.vehicles[i] as Truck);
-                return;
+              
               } else {
                 console.log("Only trucks can tow vehicles.");
               }
@@ -413,7 +413,6 @@ class Cli {
               // Check if the selected vehicle is a Motorbike
               if (this.vehicles[i] instanceof Motorbike) {
                 (this.vehicles[i] as Motorbike).wheelie();
-                return;
               } else {
                 console.log("Only motorbikes can perform a wheelie.");
               }
