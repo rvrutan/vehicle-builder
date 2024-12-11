@@ -2,7 +2,7 @@
   
 
   ## Description
-This is a TypeScript command-line application that allows users to build and manage different  types of vehicles, including cars, trucks and motorbikes. The application prompts users to either create a new vehicle or selec an existing one. Once a vehicle is selected, users can perform various actions with it. The program is designed to demonstrate object-oriented programing (OOP) principles using TypeScript.
+This is a TypeScript command-line application that allows users to build and manage different  types of vehicles, including cars, trucks and motorbikes. The application prompts users to either create a new vehicle or select an existing one. Once a vehicle is selected, users can perform various actions with it. The program is designed to demonstrate object-oriented programing (OOP) principles using TypeScript.
 
 ## Table of Contents
 -[Description](#description)
