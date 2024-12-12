@@ -39,6 +39,9 @@ Once the vehicle is created, you can perform actions such as:
 
 The user is returned to the actions menu after each action until they choose to exit.
 
+Here's an instructional video that you can watch:
+https://drive.google.com/file/d/1u7rOcJDH4d6vcaTEvUTMN179R0ip98WI/view
+
 ## License
 none
 
